@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>docReady Test Page</title>
+  <script src="../Assets/Public/JavaScript/docready.min.js"></script>
+  <script>
+// add event cross browser
+function addEvent(elem, event, fn) {
+    if (elem.addEventListener) {
+        elem.addEventListener(event, fn, false);
+    } else {
+        elem.attachEvent("on" + event, function() {
+            // set the this pointer same as addEventListener when fn is called
+            return(fn.call(elem, window.event));
+        });
+    }
+}
+
+
+var logs = [];
+var eventSet = false;
+var loaded = false;
+function log(str) {
+
+    if (loaded) {
+        output(str);
+    } else {
+        logs.push(str);
+    }
+
+    function output(str) {
+        var o = document.getElementById("log");
+        var div = document.createElement("div");
+        div.appendChild(document.createTextNode(str));
+        o.appendChild(div);
+    }
+
+    if (!eventSet) {
+        eventSet = true;
+        addEvent(window, "load", function() {
+            loaded = true;
+            for (var i = 0; i < logs.length; i++) {
+                output(logs[i]);
+            }
+            logs = [];
+        });
+    }
+}
+
+// test basic functionality
+docReady(function() {
+    document.body.appendChild(document.createTextNode("Hello Text 1"));
+    // test adding new docReady handler from a docReady callback
+    docReady(function() {
+        document.body.appendChild(document.createTextNode(", Hello Text 2"));
+    });
+});
+
+// test finding an ID in the document
+docReady(function() {
+    document.getElementById("test").innerHTML = "Hello ID";
+});
+
+// test calling docReady after window load and
+// docReady has already fired
+addEvent(window, "load", function() {
+    setTimeout(function() {
+    document.body.appendChild(document.createTextNode(", Hello Text 2.5"));
+
+        docReady(function(arg) {
+            document.body.appendChild(document.createTextNode(arg));
+        }, ", Hello Text 3");
+    }, 1);
+});
+</script>
+
+</head>
+
+<body>
+<div id="log"></div>
+<div id="test"></div>
+</body>
+</html>

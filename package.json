@@ -1,20 +1,24 @@
 {
-  "name": "lenda-consulting/docready",
-  "author": {
-    "name":"jfriend00",
-    "url":"https://github.com/jfriend00"
-  },
-  "contributors":[
+  "name": "docready",
+  "author": "https://github.com/jfriend00/docReady",
+  "contributors": [
     {
-      "name":"Adam Lenda",
-      "url":"https://github.com/AdamLenda"
+      "name": "Adam Lenda",
+      "url": "https://github.com/AdamLenda"
     }
   ],
   "version": "1.0.0",
   "description": "An ES5 compatiable vanilia JS script to perform document.ready functionality w/o requiring jQuery",
   "main": "docready.js",
   "repository": "https://github.com/AdamLenda/docReady",
-  "author": "https://github.com/jfriend00/docReady",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "vinyl-paths": "^3.0.0"
+  }
 }
