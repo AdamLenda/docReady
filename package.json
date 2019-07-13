@@ -10,7 +10,7 @@
       "url": "https://github.com/AdamLenda"
     }
   ],
-  "version": "2019.1.0",
+  "version": "2019.1.1",
   "description": "An ES5 compatible JS script to perform document.ready functionality without requiring jQuery",
   "main": "docready.js",
   "repository": "https://github.com/AdamLenda/docReady",
