@@ -1,6 +1,9 @@
 {
-  "name": "docready",
-  "author": "https://github.com/jfriend00/docReady",
+  "name": "es5-docready",
+  "author": {
+    "name": "jfriend00",
+    "url": "https://github.com/jfriend00/docReady"
+  },
   "contributors": [
     {
       "name": "Adam Lenda",
@@ -8,7 +11,7 @@
     }
   ],
   "version": "2019.1.0",
-  "description": "An ES5 compatiable vanilia JS script to perform document.ready functionality w/o requiring jQuery",
+  "description": "An ES5 compatible JS script to perform document.ready functionality without requiring jQuery",
   "main": "docready.js",
   "repository": "https://github.com/AdamLenda/docReady",
   "license": "MIT",

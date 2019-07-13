@@ -4,6 +4,21 @@
 
 This fork only adds the nessicary files to make this lib available as minified JS that can be pulled in via yarn.
 
+## To Use
+
+See example file [docreadytest.html](Test/docreadytest.html)
+
+### Example
+
+```html
+<script src="../Assets/Public/JavaScript/docready.min.js"></script>
+<script>
+docready(function() {
+  console.log("Hello DocReady!");
+});
+</script>
+```
+
 # ReadMe as originally written by [jfriend00](https://github.com/jfriend00/docReady)
 
 docReady is a single plain javascript function that provides a method of 
