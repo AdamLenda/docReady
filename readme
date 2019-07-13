@@ -1,3 +1,11 @@
+# Credit to [jfriend00/docReady](https://github.com/jfriend00/docReady)
+
+## Reason for the fork
+
+This fork only adds the nessicary files to make this lib available as minified JS that can be pulled in via yarn.
+
+# ReadMe as originally written by [jfriend00](https://github.com/jfriend00/docReady)
+
 docReady is a single plain javascript function that provides a method of 
 scheduling one or more javascript functions to run at some later
 point when the DOM has finished loading.
